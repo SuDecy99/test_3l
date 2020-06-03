@@ -112,7 +112,7 @@ TEST(function_check, max_bomb) {
 
 TEST(function_check, line_bomb) {
     vector <int> b(100);
-    int i;
+    int i, k=0;
 
     for(i=0;i<10;i++)
         b.at(i)=10;
@@ -121,8 +121,8 @@ TEST(function_check, line_bomb) {
 
     for(i=10;i<20;i++)
     {
-        if(i==10 || i==19) { EXPECT_EQ(b.at(i), 2);}
-        if(i>10 && i<19) { EXPECT_EQ(b.at(i), 3); }
+        if(i==10 || i==19)  EXPECT_EQ(b.at(i), 2);
+        if(i>10 && i<19)  EXPECT_EQ(b.at(i), 3); 
     }
 }
 
