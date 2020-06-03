@@ -5,7 +5,7 @@ int i,j,k;
 void function_zero(vector <int>& brik)
 {
 
-    for(i=0;i<100;i++)
+    for (i=0;i<100;i++)
         {
              brik.at(i)= 0;
         }
@@ -35,15 +35,17 @@ void function_bomb(vector <int>& brik)
 void check(vector <int>& brics)
 {
     int k=0;
-    for(i=0;i<100;i++)
+    for(i=0;i<100;i++) {
         if ( brics.at(i) != 0 ) k++;
         if(k!=10)
             {
             function_zero(brics);
             function_bomb(brics);
             }
-
+    }
+    
     for ( k = 0; k<100; k++ )
+    {
     if(brics.at(k)!= 10)
     {
     if( ( k % 10 ) != 0 )
@@ -80,6 +82,7 @@ void check(vector <int>& brics)
     if((k>9) && (k % 10 != 0))
     {
         if(brics.at(k-11)==10) brics.at(k)++;
+    }
     }
     }
 
