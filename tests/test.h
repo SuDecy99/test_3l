@@ -92,7 +92,7 @@ TEST(function_check, non_bomb) {
     for(i=0;i<100;i++)
     EXPECT_EQ(k, 10);
 }
-
+/*
 TEST(function_check, max_bomb) {
     vector <int> b(100);
     int i,k=0;
@@ -108,7 +108,7 @@ TEST(function_check, max_bomb) {
     for(i=0;i<100;i++)
     EXPECT_EQ(k, 10);
 }
-
+*/
 
 TEST(function_check, line_bomb) {
     vector <int> b(100);
